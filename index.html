@@ -20,110 +20,29 @@
     padding: 80px 64px;
     border-right: 1px solid var(--border);
   }
-  .hero-tag {
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--rose);
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
-  .hero-photo {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 2px solid var(--rose);
-    margin-bottom: 24px;
-  }
-  .hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    margin-bottom: 8px;
-  }
-  .hero-name em { font-style: italic; color: var(--rose); }
-  .hero-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: var(--text-light);
-    margin-bottom: 28px;
-    font-style: italic;
-  }
-  .hero-desc {
-    font-size: 0.88rem;
-    color: var(--text-light);
-    max-width: 400px;
-    margin-bottom: 36px;
-    line-height: 1.85;
-  }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .hero-right {
-    background: var(--beige);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 64px;
-  }
-  .info-grid { display: grid; gap: 28px; }
-  .info-block { border-left: 2px solid var(--rose); padding-left: 20px; }
-  .info-label {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--rose);
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-  .info-value { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
-  .quick-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-  }
-  .quick-nav a {
-    text-decoration: none;
-    padding: 28px 24px;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: white;
-    transition: background 0.2s, transform 0.2s;
-    display: block;
-  }
-  .quick-nav a:hover { background: var(--rose-pale); transform: translateY(-2px); }
-  .qn-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 300;
-    color: var(--border);
-    display: block;
-    margin-bottom: 6px;
-  }
-  .qn-title {
-    font-size: 0.76rem;
-    font-weight: 500;
-    color: var(--text);
-    display: block;
-    margin-bottom: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .qn-desc { font-size: 0.72rem; color: var(--text-light); }
-  @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-left, .hero-right { padding: 48px 24px; }
-    .quick-nav { grid-template-columns: 1fr 1fr; }
-  }
+  .hero-tag { font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--rose); font-weight:500; margin-bottom:24px; }
+  .hero-photo { width:90px; height:90px; border-radius:50%; object-fit:cover; object-position:center top; border:2px solid var(--rose); margin-bottom:24px; }
+  .hero-name { font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,5vw,4.5rem); font-weight:300; line-height:1.05; margin-bottom:8px; }
+  .hero-name em { font-style:italic; color:var(--rose); }
+  .hero-subtitle { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:300; color:var(--text-light); margin-bottom:28px; font-style:italic; }
+  .hero-desc { font-size:0.88rem; color:var(--text-light); max-width:400px; margin-bottom:36px; line-height:1.85; }
+  .hero-btns { display:flex; gap:14px; flex-wrap:wrap; }
+  .hero-right { background:var(--beige); display:flex; flex-direction:column; justify-content:center; padding:80px 64px; }
+  .info-grid { display:grid; gap:28px; }
+  .info-block { border-left:2px solid var(--rose); padding-left:20px; }
+  .info-label { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); font-weight:500; margin-bottom:4px; }
+  .info-value { font-size:0.88rem; color:var(--text); line-height:1.6; }
+  .quick-nav { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--border); border-left:1px solid var(--border); }
+  .quick-nav a { text-decoration:none; padding:28px 24px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); background:white; transition:background 0.2s,transform 0.2s; display:block; }
+  .quick-nav a:hover { background:var(--rose-pale); transform:translateY(-2px); }
+  .qn-num { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:var(--border); display:block; margin-bottom:6px; }
+  .qn-title { font-size:0.76rem; font-weight:500; color:var(--text); display:block; margin-bottom:3px; text-transform:uppercase; letter-spacing:0.06em; }
+  .qn-desc { font-size:0.72rem; color:var(--text-light); }
+  @media(max-width:768px){ .hero{grid-template-columns:1fr;} .hero-left,.hero-right{padding:48px 24px;} .quick-nav{grid-template-columns:1fr 1fr;} }
 </style>
 </head>
 <body>
-
 <div class="scroll-progress" id="scrollProgress"></div>
-
 <nav>
   <a href="index.html" class="nav-logo">Latufa Riama</a>
   <ul class="nav-links">
@@ -132,6 +51,7 @@
     <li><a href="e6.html">Épreuve E6</a></li>
     <li><a href="veille.html">Veille</a></li>
     <li><a href="entreprise.html">Entreprise</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-jury">Espace Jury</div>
 </nav>
@@ -142,9 +62,7 @@
     <img src="Latufa.jpg" alt="Latufa Riama" class="hero-photo">
     <h1 class="hero-name">Latufa<br><em>Riama</em></h1>
     <p class="hero-subtitle">Apprentie Administratrice Systèmes &amp; Réseaux</p>
-    <p class="hero-desc">
-      Étudiante en BTS SIO option SISR a l'école IRIS Paris, en alternance chez WeLink depuis decembre 2024. Support N1/N2, administration Active Directory, Microsoft 365 et infrastructures réseau pour des offices notariaux.
-    </p>
+    <p class="hero-desc">Étudiante en BTS SIO option SISR à l'école IRIS Paris, en alternance chez WeLink depuis décembre 2024. Support N1/N2, administration Active Directory, Microsoft 365 et infrastructures réseau pour des offices notariaux.</p>
     <div class="hero-btns">
       <a href="e5.html" class="btn-primary">Voir mon E5</a>
       <a href="CV_Latufa_Riama.pdf" target="_blank" class="btn-outline">Mon CV</a>
@@ -158,10 +76,10 @@
       </div>
       <div class="info-block fade-in">
         <div class="info-label">Entreprise</div>
-        <div class="info-value">WeLink &middot; Montreuil<br>Alternance depuis dec. 2024</div>
+        <div class="info-value">WeLink &middot; Montreuil<br>Alternance depuis déc. 2024</div>
       </div>
       <div class="info-block fade-in">
-        <div class="info-label">Role</div>
+        <div class="info-label">Rôle</div>
         <div class="info-value">Technicienne support N1/N2<br>Administration systèmes &amp; réseaux</div>
       </div>
       <div class="info-block fade-in">
@@ -185,7 +103,6 @@
     <span>NAS Synology</span><span class="dot">&middot;</span>
     <span>RDP / TSE</span><span class="dot">&middot;</span>
     <span>Azure AD</span><span class="dot">&middot;</span>
-    <span>VLAN &amp; Routage</span><span class="dot">&middot;</span>
     <span>Active Directory</span><span class="dot">&middot;</span>
     <span>Microsoft 365</span><span class="dot">&middot;</span>
     <span>VPN Sophos</span><span class="dot">&middot;</span>
@@ -201,32 +118,32 @@
   <a href="e5.html">
     <span class="qn-num">01</span>
     <span class="qn-title">Épreuve E5</span>
-    <span class="qn-desc">Projet StadiumCompany</span>
+    <span class="qn-desc">Oral — Missions WeLink</span>
   </a>
   <a href="e6.html">
     <span class="qn-num">02</span>
     <span class="qn-title">Épreuve E6</span>
-    <span class="qn-desc">Situations professionnelles</span>
+    <span class="qn-desc">Projet StadiumCompany</span>
   </a>
   <a href="veille.html">
     <span class="qn-num">03</span>
     <span class="qn-title">Veille Techno</span>
     <span class="qn-desc">Cybersécurité accès distants</span>
   </a>
-  <a href="competences.html">
-    <span class="qn-num">04</span>
-    <span class="qn-title">Compétences</span>
-    <span class="qn-desc">Outils &amp; technologies</span>
-  </a>
   <a href="entreprise.html">
-    <span class="qn-num">05</span>
+    <span class="qn-num">04</span>
     <span class="qn-title">Entreprise</span>
     <span class="qn-desc">WeLink &middot; Montreuil</span>
   </a>
   <a href="CV_Latufa_Riama.pdf" target="_blank">
     <span class="qn-num">CV</span>
     <span class="qn-title">Mon CV</span>
-    <span class="qn-desc">Voir sur Canva</span>
+    <span class="qn-desc">Télécharger en PDF</span>
+  </a>
+  <a href="contact.html">
+    <span class="qn-num">&#9993;</span>
+    <span class="qn-title">Contact</span>
+    <span class="qn-desc">Me contacter</span>
   </a>
 </div>
 
@@ -240,19 +157,11 @@
     <div class="footer-copy">&copy; 2026 &middot; <span>BTS SIO SISR</span> &middot; IRIS Paris</div>
   </div>
 </footer>
-
 <script>
   const progressBar = document.getElementById("scrollProgress");
-  window.addEventListener("scroll", () => {
-    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
-    if(progressBar) progressBar.style.width = pct + "%";
-  });
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add("visible"), i * 100); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.08 });
-  document.querySelectorAll(".fade-in").forEach(el => obs.observe(el));
+  window.addEventListener("scroll", () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; if(progressBar) progressBar.style.width = pct + "%"; });
+  const obs = new IntersectionObserver(entries => { entries.forEach((e,i) => { if(e.isIntersecting){setTimeout(()=>e.target.classList.add("visible"),i*100);obs.unobserve(e.target);} }); },{threshold:0.08});
+  document.querySelectorAll(".fade-in").forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>

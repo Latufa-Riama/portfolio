@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Latufa Riama</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+  .contact-info h2 { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--rose); margin-bottom:16px; }
+  .contact-info p { font-size:0.9rem; color:var(--text-light); line-height:1.9; margin-bottom:32px; }
+  .contact-item { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+  .contact-icon { width:48px; height:48px; background:var(--rose); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+  .contact-label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--rose); font-weight:600; margin-bottom:2px; }
+  .contact-value { font-size:0.9rem; color:var(--text); }
+  .contact-value a { color:var(--text); text-decoration:none; }
+  .contact-value a:hover { color:var(--rose); }
+  .map-embed { width:100%; height:250px; border:1px solid var(--border); border-radius:4px; margin-top:32px; }
+  @media(max-width:768px){ .contact-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<nav>
+  <a href="index.html" class="nav-logo">Latufa Riama</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="e5.html">Épreuve E5</a></li>
+    <li><a href="e6.html">Épreuve E6</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="entreprise.html">Entreprise</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="nav-jury">Espace Jury</div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-number">&#9993;</div>
+    <div class="page-title-block">
+      <span>Me contacter</span>
+      <h1>Restons<br>en contact</h1>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="contact-grid">
+    <div class="contact-info fade-in">
+      <h2>N'hésitez pas à me contacter</h2>
+      <p>Disponible pour discuter de mon parcours, de mes missions chez WeLink ou de toute opportunité professionnelle en administration systèmes et réseaux.</p>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128140;</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:ria.latufa@outlook.fr">ria.latufa@outlook.fr</a></div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128241;</div>
+        <div>
+          <div class="contact-label">Téléphone</div>
+          <div class="contact-value"><a href="tel:+33658943242">06 58 94 32 42</a></div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128279;</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value"><a href="https://www.linkedin.com/in/latufa-r-51b45a205/" target="_blank">Latufa Riama</a></div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128205;</div>
+        <div>
+          <div class="contact-label">Localisation</div>
+          <div class="contact-value">Fontenay-sous-Bois (94)<br>Île-de-France</div>
+        </div>
+      </div>
+
+      <iframe
+        class="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624!2d2.475!3d48.854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e672f9de8f6dc7%3A0x40b82c3688c9460!2sFontenay-sous-Bois!5e0!3m2!1sfr!2sfr!4v1"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;">
+      </iframe>
+    </div>
+
+    <div class="fade-in">
+      <div class="context-box">
+        <h3>Portfolio &amp; Documents</h3>
+        <p>Retrouvez l'ensemble de mes réalisations, fiches techniques et mon CV directement sur ce portfolio.</p>
+        <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px;">
+          <a href="CV_Latufa_Riama.pdf" target="_blank" class="btn-primary">&#8595; Télécharger mon CV</a>
+          <a href="e5.html" class="btn-outline">Voir mes missions WeLink (E5)</a>
+          <a href="e6.html" class="btn-outline">Voir le projet StadiumCompany (E6)</a>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;" class="context-box">
+        <h3>Informations candidat</h3>
+        <p>
+          <strong>N° candidat :</strong> 02543688831<br>
+          <strong>Formation :</strong> BTS SIO SISR — IRIS Paris<br>
+          <strong>Statut :</strong> Candidat libre<br>
+          <strong>Alternance :</strong> WeLink, Montreuil (93)<br>
+          <strong>Portfolio :</strong> https://latufa-riama.github.io/portfolio/
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Latufa Riama</div>
+    <div class="footer-links">
+      <a href="mailto:ria.latufa@outlook.fr">ria.latufa@outlook.fr</a>
+      <a href="https://www.linkedin.com/in/latufa-r-51b45a205/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 &middot; <span>BTS SIO SISR</span> &middot; IRIS Paris</div>
+  </div>
+</footer>
+<script>
+  const progressBar = document.getElementById("scrollProgress");
+  window.addEventListener("scroll", () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; if(progressBar) progressBar.style.width = pct + "%"; });
+  const obs = new IntersectionObserver(entries => { entries.forEach((e,i) => { if(e.isIntersecting){setTimeout(()=>e.target.classList.add("visible"),i*100);obs.unobserve(e.target);} }); },{threshold:0.08});
+  document.querySelectorAll(".fade-in").forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
