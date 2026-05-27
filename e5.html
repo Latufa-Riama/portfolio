@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E5 — Latufa Riama</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Latufa Riama</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="e5.html" class="active">Epreuve E5</a></li>
+    <li><a href="e6.html">Epreuve E6</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="competences.html">Competences</a></li>
+    <li><a href="entreprise.html">Entreprise</a></li>
+  </ul>
+  <div class="nav-jury">Espace Jury</div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-number">01</div>
+    <div class="page-title-block">
+      <span>Epreuve E5</span>
+      <h1>Administration des systemes<br>et des reseaux</h1>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <div class="context-box fade-in">
+    <h3>Projet StadiumCompany</h3>
+    <p>
+      Dans le cadre du projet scolaire, notre groupe a ete mandate en tant que NetworkingCompany pour moderniser l'infrastructure reseau d'un grand stade accueillant evenements sportifs et culturels. Le reseau initial ne repondait plus aux exigences de performance et de securite liees a la croissance des equipements.
+    </p>
+    <div class="context-meta">
+      <div class="meta-item"><strong>Effectifs</strong>170 permanents + ~80 interimaires</div>
+      <div class="meta-item"><strong>Sites distants</strong>Billetterie & boutique (DSL)</div>
+      <div class="meta-item"><strong>Missions</strong>9 missions techniques</div>
+      <div class="meta-item"><strong>Contexte</strong>Milieu scolaire</div>
+    </div>
+  </div>
+
+  <div class="section-label">Missions realisees</div>
+  <h2 class="section-heading">Les 6 missions du projet</h2>
+
+  <div class="cards-grid">
+    <div class="card fade-in">
+      <div class="card-icon">&#127760;</div>
+      <div class="card-title">Restructuration reseau</div>
+      <div class="card-desc">Segmentation de l'infrastructure via VLANs, configuration VTP et mise en place du routage inter-VLAN et routage statique pour optimiser les flux reseau.</div>
+      <div class="card-tools">
+        <span class="tool-tag">VLAN</span>
+        <span class="tool-tag">VTP</span>
+        <span class="tool-tag">Routage statique</span>
+        <span class="tool-tag">Cisco</span>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">&#128100;</div>
+      <div class="card-title">Services Active Directory</div>
+      <div class="card-desc">Installation et administration de l'Active Directory sur Windows Server 2022 : gestion des utilisateurs, groupes et politiques de groupe (GPO).</div>
+      <div class="card-tools">
+        <span class="tool-tag">Active Directory</span>
+        <span class="tool-tag">GPO</span>
+        <span class="tool-tag">Windows Server</span>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">&#128274;</div>
+      <div class="card-title">Administration distante & securite</div>
+      <div class="card-desc">Mise en place d'une solution d'administration securisee a distance via SSH et VPN pour securiser les interconnexions entre sites.</div>
+      <div class="card-tools">
+        <span class="tool-tag">SSH</span>
+        <span class="tool-tag">VPN</span>
+        <span class="tool-tag">Securite reseau</span>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">&#128231;</div>
+      <div class="card-title">Messagerie Zimbra</div>
+      <div class="card-desc">Deploiement et configuration d'un serveur de messagerie Zimbra sous Linux pour les communications internes du stade.</div>
+      <div class="card-tools">
+        <span class="tool-tag">Zimbra</span>
+        <span class="tool-tag">DNS</span>
+        <span class="tool-tag">Linux</span>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">&#128187;</div>
+      <div class="card-title">Inventaire & ticketing GLPI</div>
+      <div class="card-desc">Installation et integration d'OCS Inventory avec GLPI pour la gestion du parc informatique et le suivi des incidents via ticketing.</div>
+      <div class="card-tools">
+        <span class="tool-tag">GLPI</span>
+        <span class="tool-tag">OCS Inventory</span>
+        <span class="tool-tag">ITSM</span>
+      </div>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">&#128202;</div>
+      <div class="card-title">Supervision NagiosXI</div>
+      <div class="card-desc">Deploiement de NagiosXI pour la supervision et la surveillance en temps reel des equipements reseau, avec alertes automatiques.</div>
+      <div class="card-tools">
+        <span class="tool-tag">NagiosXI</span>
+        <span class="tool-tag">Monitoring</span>
+        <span class="tool-tag">SNMP</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Latufa Riama</div>
+    <div class="footer-links">
+      <a href="mailto:ria.latufa@outlook.fr">ria.latufa@outlook.fr</a>
+      <a href="https://www.linkedin.com/in/latufa-r-51b45a205/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 &middot; <span>BTS SIO SISR</span> &middot; IRIS Paris</div>
+  </div>
+</footer>
+
+<script>
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    progressBar.style.width = pct + '%';
+  });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

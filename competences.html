@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competences — Latufa Riama</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+  }
+  .comp-group {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 32px;
+  }
+  .comp-group h3 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .comp-group ul { list-style: none; }
+  .comp-group li {
+    font-size: 0.86rem;
+    color: var(--text);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rose-pale);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .comp-group li::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--rose);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Latufa Riama</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="e5.html">Epreuve E5</a></li>
+    <li><a href="e6.html">Epreuve E6</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="competences.html" class="active">Competences</a></li>
+    <li><a href="entreprise.html">Entreprise</a></li>
+  </ul>
+  <div class="nav-jury">Espace Jury</div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-number">04</div>
+    <div class="page-title-block">
+      <span>Competences techniques</span>
+      <h1>Outils &amp; technologies<br>maitrisees</h1>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="section-label">Stack technique</div>
+  <h2 class="section-heading">Mes competences par domaine</h2>
+
+  <div class="comp-grid">
+    <div class="comp-group fade-in">
+      <h3>Systemes &amp; Serveurs</h3>
+      <ul>
+        <li>Windows Server (AD, DNS, DHCP)</li>
+        <li>Active Directory &amp; GPO</li>
+        <li>Windows 10 / 11</li>
+        <li>Hyper-V / VMware</li>
+        <li>NAS Synology</li>
+        <li>BitLocker</li>
+      </ul>
+    </div>
+    <div class="comp-group fade-in">
+      <h3>Reseau &amp; Securite</h3>
+      <ul>
+        <li>VPN Sophos</li>
+        <li>RDP / TSE</li>
+        <li>VLAN &amp; Routage inter-VLAN</li>
+        <li>SSH</li>
+        <li>TCP/IP, DHCP, DNS</li>
+        <li>Pare-feu &amp; filtrage</li>
+      </ul>
+    </div>
+    <div class="comp-group fade-in">
+      <h3>Microsoft 365</h3>
+      <ul>
+        <li>Exchange Online</li>
+        <li>SharePoint Online</li>
+        <li>Outlook / Teams</li>
+        <li>Azure AD / Entra ID</li>
+        <li>Admin Center M365</li>
+        <li>OneDrive</li>
+      </ul>
+    </div>
+    <div class="comp-group fade-in">
+      <h3>Outils ITSM</h3>
+      <ul>
+        <li>Autotask (ticketing)</li>
+        <li>GLPI</li>
+        <li>OCS Inventory</li>
+        <li>NagiosXI</li>
+        <li>Genapi</li>
+        <li>iNot / Fiducial Notariat</li>
+      </ul>
+    </div>
+    <div class="comp-group fade-in">
+      <h3>Soft skills</h3>
+      <ul>
+        <li>Rigoureuse &amp; organisee</li>
+        <li>Reactive sous pression</li>
+        <li>Bonne communication client</li>
+        <li>Travail en equipe</li>
+        <li>Redaction de procedures</li>
+        <li>Adaptable &amp; curieuse</li>
+      </ul>
+    </div>
+    <div class="comp-group fade-in">
+      <h3>Langues</h3>
+      <ul>
+        <li>Francais &mdash; courant</li>
+        <li>Anglais &mdash; lu/ecrit</li>
+        <li>Mahorais &mdash; natif</li>
+        <li>Espagnol &mdash; notions</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Latufa Riama</div>
+    <div class="footer-links">
+      <a href="mailto:ria.latufa@outlook.fr">ria.latufa@outlook.fr</a>
+      <a href="https://www.linkedin.com/in/latufa-r-51b45a205/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 &middot; <span>BTS SIO SISR</span> &middot; IRIS Paris</div>
+  </div>
+</footer>
+
+<script>
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    progressBar.style.width = pct + '%';
+  });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
