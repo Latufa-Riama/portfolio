@@ -6,185 +6,34 @@
 <title>Épreuve E6 — Latufa Riama</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .e-intro {
-    max-width: 860px;
-    margin: 0 auto 48px;
-    font-size: 0.95rem;
-    color: var(--text-light);
-    line-height: 1.9;
-    text-align: justify;
-  }
-  .e-intro strong { color: var(--text); }
-
-  .objectifs-box {
-    background: var(--rose-pale);
-    border-left: 4px solid var(--rose);
-    border-radius: 0 4px 4px 0;
-    padding: 24px 32px;
-    margin: 32px 0;
-  }
-  .objectifs-box h3 {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--rose);
-    margin-bottom: 12px;
-  }
-  .objectifs-box ul {
-    list-style: none;
-    padding: 0;
-  }
-  .objectifs-box ul li {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    padding: 4px 0;
-    padding-left: 16px;
-    position: relative;
-  }
-  .objectifs-box ul li::before {
-    content: '—';
-    color: var(--rose);
-    position: absolute;
-    left: 0;
-  }
-  .objectifs-box ul li strong { color: var(--text); }
-
-  .realisations-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin-top: 32px;
-  }
-
-  .realisation-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 32px;
-    transition: transform 0.3s ease, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .realisation-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 4px; height: 100%;
-    background: var(--rose);
-  }
-  .realisation-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(212,160,160,0.15);
-  }
-  .realisation-num {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--rose);
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .realisation-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
-  .realisation-desc {
-    font-size: 0.83rem;
-    color: var(--text-light);
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 20px;
-  }
-  .tag {
-    font-size: 0.68rem;
-    background: var(--rose-pale);
-    color: var(--rose);
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-  .card-links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .card-link {
-    font-size: 0.78rem;
-    color: var(--rose);
-    text-decoration: none;
-    border: 1px solid var(--rose);
-    padding: 6px 14px;
-    border-radius: 2px;
-    transition: all 0.2s;
-    font-weight: 500;
-  }
-  .card-link:hover {
-    background: var(--rose);
-    color: white;
-  }
-
-  .missions-pro {
-    margin-top: 64px;
-  }
-  .missions-pro h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .missions-pro .sub {
-    font-size: 0.82rem;
-    color: var(--text-light);
-    margin-bottom: 32px;
-  }
-
-  .mission-pro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .mission-pro-card {
-    background: var(--rose-pale);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 24px 28px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .mission-pro-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(212,160,160,0.12);
-  }
-  .mission-pro-icon { font-size: 1.4rem; margin-bottom: 10px; }
-  .mission-pro-title {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .mission-pro-desc {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    line-height: 1.7;
-  }
-
-  @media (max-width: 768px) {
-    .realisations-grid { grid-template-columns: 1fr; }
-  }
+  .e-intro { max-width:860px; margin:0 auto 48px; font-size:0.95rem; color:var(--text-light); line-height:1.9; text-align:justify; }
+  .e-intro strong { color:var(--text); }
+  .objectifs-box { background:var(--rose-pale); border-left:4px solid var(--rose); border-radius:0 4px 4px 0; padding:24px 32px; margin:32px 0; }
+  .objectifs-box h3 { font-size:0.9rem; font-weight:600; color:var(--rose); margin-bottom:12px; }
+  .objectifs-box ul { list-style:none; padding:0; }
+  .objectifs-box ul li { font-size:0.85rem; color:var(--text-light); padding:4px 0 4px 16px; position:relative; }
+  .objectifs-box ul li::before { content:'—'; color:var(--rose); position:absolute; left:0; }
+  .objectifs-box ul li strong { color:var(--text); }
+  .realisations-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:32px; }
+  .realisation-card { background:white; border:1px solid var(--border); border-radius:4px; padding:32px; transition:transform 0.3s,box-shadow 0.3s; position:relative; overflow:hidden; }
+  .realisation-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:100%; background:var(--rose); }
+  .realisation-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(212,160,160,0.15); }
+  .realisation-num { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); font-weight:600; margin-bottom:8px; }
+  .realisation-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; color:var(--text); margin-bottom:12px; line-height:1.3; }
+  .realisation-desc { font-size:0.83rem; color:var(--text-light); line-height:1.8; margin-bottom:20px; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px; }
+  .tag { font-size:0.68rem; background:var(--rose-pale); color:var(--rose); padding:3px 10px; border-radius:20px; font-weight:500; }
+  .card-links { display:flex; gap:10px; flex-wrap:wrap; }
+  .card-link { font-size:0.78rem; color:var(--rose); text-decoration:none; border:1px solid var(--rose); padding:6px 14px; border-radius:2px; transition:all 0.2s; font-weight:500; }
+  .card-link:hover { background:var(--rose); color:white; }
+  .pdf-viewer-section { margin:48px 0; }
+  .pdf-viewer-section h2 { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:400; color:var(--text); margin-bottom:16px; }
+  .pdf-embed { width:100%; height:600px; border:1px solid var(--border); border-radius:4px; }
+  @media(max-width:768px){ .realisations-grid{grid-template-columns:1fr;} .pdf-embed{height:400px;} }
 </style>
 </head>
 <body>
-
 <div class="scroll-progress" id="scrollProgress"></div>
-
 <nav>
   <a href="index.html" class="nav-logo">Latufa Riama</a>
   <ul class="nav-links">
@@ -203,32 +52,34 @@
     <div class="page-number">02</div>
     <div class="page-title-block">
       <span>Épreuve E6</span>
-      <h1>Situations professionnelles<br>en entreprise</h1>
+      <h1>Administration des systèmes<br>et des réseaux</h1>
     </div>
   </div>
 </div>
 
 <div class="main-content">
-
-  <!-- INTRO -->
   <div class="e-intro fade-in">
-    <p>
-      L'épreuve <strong>E6</strong> (Session 2026) du BTS SIO SISR évalue la capacité à concevoir, déployer et administrer une infrastructure réseau complète. Ici, les situations professionnelles se déroulent au sein de la société <strong>StadiumCompany</strong>, spécialisée dans les activités d'administration et de gestion. Pour la conception et l'implémentation de ses solutions systèmes et réseaux, elle s'appuie sur l'expertise de <strong>Networkingcompany</strong>.
-    </p>
-
+    <p>L'épreuve <strong>E6</strong> (Session 2026) du BTS SIO SISR évalue la capacité à concevoir, déployer et administrer une infrastructure réseau complète. Les réalisations se déroulent au sein de la société <strong>StadiumCompany</strong>, spécialisée dans les activités d'administration et de gestion, qui s'appuie sur l'expertise de <strong>Networkingcompany</strong> pour la mise en œuvre de ses solutions.</p>
     <div class="objectifs-box">
       <h3>&#9673; Objectifs de l'épreuve</h3>
       <ul>
-        <li><strong>Conception :</strong> Analyse des besoins et choix d'architecture (VLANs, DMZ, sécurité).</li>
+        <li><strong>Conception :</strong> Analyse des besoins et choix d'architecture (VLANs, sécurité, DMZ).</li>
         <li><strong>Mise en œuvre :</strong> Déploiement de services Windows Server 2022 (AD, DNS, DHCP) et équipements Cisco.</li>
         <li><strong>Exploitation :</strong> Supervision avec NagiosXI et gestion de parc via GLPI/OCS Inventory.</li>
       </ul>
     </div>
-
     <p>Les deux réalisations ci-dessous ont été développées à partir du cahier des charges StadiumCompany.</p>
   </div>
 
-  <!-- REALISATIONS FORMATION -->
+  <!-- TABLEAU DE SYNTHESE -->
+  <div class="pdf-viewer-section fade-in">
+    <h2>&#128065; Aperçu de mon Tableau de Synthèse</h2>
+    <embed src="Tableau_Synthese_E5_Latufa.pdf" type="application/pdf" class="pdf-embed">
+    <div style="margin-top:16px;">
+      <a href="Tableau_Synthese_E5_Latufa.pdf" target="_blank" class="btn-primary">&#8595; Télécharger le Tableau de Synthèse</a>
+    </div>
+  </div>
+
   <div class="section-label fade-in">Réalisations en cours de formation</div>
   <h2 class="section-heading fade-in">Projet StadiumCompany — 2 réalisations</h2>
 
@@ -236,87 +87,30 @@
     <div class="realisation-card fade-in">
       <div class="realisation-num">Réalisation N°1</div>
       <div class="realisation-title">Intégration du Groupe VIP et Wi-Fi Dédié</div>
-      <div class="realisation-desc">
-        StadiumCompany a inauguré une nouvelle loge de prestige destinée aux personnalités (VIP) et aux journalistes. Pour répondre aux attentes de cette clientèle exigeante, il était impératif de fournir un accès réseau isolé, sécurisé et hautement performant, distinct du Wi-Fi public et des réseaux administratifs.
-      </div>
+      <div class="realisation-desc">StadiumCompany a inauguré une nouvelle loge de prestige destinée aux VIP et journalistes. Il fallait fournir un accès réseau isolé, sécurisé et hautement performant, distinct du Wi-Fi public et des réseaux administratifs.</div>
       <div class="tags">
-        <span class="tag">Cisco</span>
-        <span class="tag">VLAN 50</span>
-        <span class="tag">Active Directory</span>
-        <span class="tag">GPO</span>
-        <span class="tag">Wi-Fi WPA2-AES</span>
-        <span class="tag">ACL</span>
+        <span class="tag">VLAN 50</span><span class="tag">Active Directory</span>
+        <span class="tag">GPO</span><span class="tag">Wi-Fi WPA2-AES</span>
+        <span class="tag">Cisco</span><span class="tag">ACL</span>
       </div>
       <div class="card-links">
         <a href="Fiche_Descriptive_Latufa_RP1.pdf" target="_blank" class="card-link">&#8595; Fiche réalisation</a>
       </div>
     </div>
-
     <div class="realisation-card fade-in">
       <div class="realisation-num">Réalisation N°2</div>
       <div class="realisation-title">Environnement collaboratif et supervision</div>
-      <div class="realisation-desc">
-        Au-delà de la simple connectivité, les utilisateurs VIP et Presse exigent une qualité de service irréprochable : accès à la messagerie officielle du stade, réactivité maximale du support technique et garantie de disponibilité du réseau Wi-Fi dédié déployé en RP1.
-      </div>
+      <div class="realisation-desc">Au-delà de la connectivité, les utilisateurs VIP exigent une qualité de service irréprochable : messagerie collaborative, gestion de parc automatisée et supervision proactive du réseau Wi-Fi dédié.</div>
       <div class="tags">
-        <span class="tag">Nagios</span>
-        <span class="tag">Active Directory</span>
-        <span class="tag">GLPI</span>
-        <span class="tag">OCS Inventory</span>
-        <span class="tag">Zimbra</span>
-        <span class="tag">LDAP</span>
-        <span class="tag">SNMP</span>
+        <span class="tag">Zimbra</span><span class="tag">LDAP</span>
+        <span class="tag">OCS Inventory</span><span class="tag">GLPI</span>
+        <span class="tag">NagiosXI</span><span class="tag">SNMP</span>
       </div>
       <div class="card-links">
         <a href="Fiche_Descriptive_Latufa_RP2.pdf" target="_blank" class="card-link">&#8595; Fiche réalisation</a>
       </div>
     </div>
   </div>
-
-  <!-- MISSIONS PRO WELINK -->
-  <div class="missions-pro fade-in">
-    <h2>Réalisations en milieu professionnel</h2>
-    <p class="sub">WeLink &mdash; Montreuil &middot; Décembre 2024 &rarr; aujourd'hui &middot; Support N1/N2 via Autotask</p>
-
-    <div class="mission-pro-grid">
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128105;&#8205;&#128187;</div>
-        <div class="mission-pro-title">Création comptes utilisateurs AD</div>
-        <div class="mission-pro-desc">Création et configuration de comptes dans l'Active Directory avec attribution des accès, groupes et droits adaptés au profil de chaque notaire ou collaborateur.</div>
-      </div>
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128140;</div>
-        <div class="mission-pro-title">Création boîte mail & licences M365</div>
-        <div class="mission-pro-desc">Création de boîtes Exchange Online avec attribution des licences Microsoft 365 adaptées au rôle de l'utilisateur (E1, E3, Business).</div>
-      </div>
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128274;</div>
-        <div class="mission-pro-title">Création accès VPN Sophos</div>
-        <div class="mission-pro-desc">Configuration et création d'accès VPN Sophos pour permettre aux utilisateurs distants de se connecter de manière sécurisée aux ressources de l'entreprise.</div>
-      </div>
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128187;</div>
-        <div class="mission-pro-title">Configuration de postes</div>
-        <div class="mission-pro-desc">Déploiement et configuration de postes pour notaires et collaborateurs : intégration au domaine, installation des logiciels métiers (Genapi, iNot, Fiducial Notariat).</div>
-      </div>
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128193;</div>
-        <div class="mission-pro-title">Gestion des accès SharePoint</div>
-        <div class="mission-pro-desc">Création et modification des permissions d'accès aux espaces SharePoint : gestion des droits par groupe et résolution d'incidents de synchronisation.</div>
-      </div>
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128231;</div>
-        <div class="mission-pro-title">Dépannage Outlook</div>
-        <div class="mission-pro-desc">Résolution d'incidents Outlook : reconfiguration de profils corrompus, résolution d'erreurs MAPI et problèmes d'authentification.</div>
-      </div>
-      <div class="mission-pro-card fade-in">
-        <div class="mission-pro-icon">&#128424;</div>
-        <div class="mission-pro-title">Dépannage imprimantes</div>
-        <div class="mission-pro-desc">Résolution d'incidents d'impression : redémarrage du spooler, reconfiguration des files d'attente, réinstallation des pilotes.</div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 <footer>
@@ -329,19 +123,11 @@
     <div class="footer-copy">&copy; 2026 &middot; <span>BTS SIO SISR</span> &middot; IRIS Paris</div>
   </div>
 </footer>
-
 <script>
   const progressBar = document.getElementById("scrollProgress");
-  window.addEventListener("scroll", () => {
-    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
-    if(progressBar) progressBar.style.width = pct + "%";
-  });
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add("visible"), i * 100); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.08 });
-  document.querySelectorAll(".fade-in").forEach(el => obs.observe(el));
+  window.addEventListener("scroll", () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; if(progressBar) progressBar.style.width = pct + "%"; });
+  const obs = new IntersectionObserver(entries => { entries.forEach((e,i) => { if(e.isIntersecting){setTimeout(()=>e.target.classList.add("visible"),i*100);obs.unobserve(e.target);} }); },{threshold:0.08});
+  document.querySelectorAll(".fade-in").forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
