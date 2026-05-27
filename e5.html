@@ -3,8 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E5 — Latufa Riama</title>
+<title>Épreuve E5 — Latufa Riama</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .e-intro {
+    max-width: 860px;
+    margin: 0 auto 48px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    text-align: justify;
+  }
+  .e-intro strong { color: var(--text); }
+
+  .objectifs-box {
+    background: var(--rose-pale);
+    border-left: 4px solid var(--rose);
+    border-radius: 0 4px 4px 0;
+    padding: 24px 32px;
+    margin: 32px 0;
+  }
+  .objectifs-box h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--rose);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .objectifs-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .objectifs-box ul li {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+  .objectifs-box ul li::before {
+    content: '—';
+    color: var(--rose);
+    position: absolute;
+    left: 0;
+  }
+  .objectifs-box ul li strong { color: var(--text); }
+
+  .pdf-viewer-section {
+    margin: 48px 0;
+  }
+  .pdf-viewer-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdf-embed {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .realisations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .realisation-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .realisation-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--rose);
+  }
+  .realisation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(212,160,160,0.15);
+  }
+  .realisation-num {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .realisation-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .realisation-desc {
+    font-size: 0.83rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .tag {
+    font-size: 0.68rem;
+    background: var(--rose-pale);
+    color: var(--rose);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .card-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card-link {
+    font-size: 0.78rem;
+    color: var(--rose);
+    text-decoration: none;
+    border: 1px solid var(--rose);
+    padding: 6px 14px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+  .card-link:hover {
+    background: var(--rose);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .realisations-grid { grid-template-columns: 1fr; }
+    .pdf-embed { height: 400px; }
+  }
+</style>
 </head>
 <body>
 
@@ -17,7 +171,7 @@
     <li><a href="e5.html" class="active">Épreuve E5</a></li>
     <li><a href="e6.html">Épreuve E6</a></li>
     <li><a href="veille.html">Veille</a></li>
-    <li><a href="compétences.html">Compétences</a></li>
+    <li><a href="competences.html">Compétences</a></li>
     <li><a href="entreprise.html">Entreprise</a></li>
   </ul>
   <div class="nav-jury">Espace Jury</div>
@@ -35,89 +189,73 @@
 
 <div class="main-content">
 
-  <div class="context-box fade-in">
-    <h3>Projet StadiumCompany</h3>
+  <div class="e-intro fade-in">
     <p>
-      Dans le cadre du projet scolaire, notre groupe a ete mandate en tant que NetworkingCompany pour moderniser l'infrastructure réseau d'un grand stade accueillant evenements sportifs et culturels. Le réseau initial ne repondait plus aux exigences de performance et de sécurité liees a la croissance des equipements.
+      L'épreuve <strong>E5</strong> du BTS SIO option SISR vise à évaluer la capacité du candidat à répondre aux besoins d'une organisation en concevant, déployant et maintenant des solutions d'infrastructure réseau et système.
     </p>
-    <div class="context-meta">
-      <div class="meta-item"><strong>Effectifs</strong>170 permanents + ~80 interimaires</div>
-      <div class="meta-item"><strong>Sites distants</strong>Billetterie & boutique (DSL)</div>
-      <div class="meta-item"><strong>Missions</strong>9 missions techniques</div>
-      <div class="meta-item"><strong>Contexte</strong>Milieu scolaire</div>
+    <p style="margin-top:12px;">
+      Elle se déroule sous la forme d'une présentation orale s'appuyant sur un dossier technique. Le jury évalue ma maîtrise des compétences du référentiel SISR à travers les réalisations présentées dans mon <strong>Tableau de Synthèse</strong>.
+    </p>
+
+    <div class="objectifs-box">
+      <h3>&#9673; Objectifs de l'épreuve</h3>
+      <ul>
+        <li><strong>Conception :</strong> Analyse des besoins et choix d'architecture (VLANs, AD, sécurité).</li>
+        <li><strong>Mise en œuvre :</strong> Déploiement de services Windows Server 2022 (AD, DNS, DHCP) et équipements Cisco.</li>
+        <li><strong>Exploitation :</strong> Supervision avec NagiosXI et gestion de parc via GLPI/OCS.</li>
+      </ul>
     </div>
   </div>
 
-  <!-- BOUTONS DOCUMENTS -->
-  <div class="fade-in" style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:48px;">
-    <a href="Tableau_Synth%C3%A8se_E5_Latufa.pdf" target="_blank" class="btn-primary">&#8595; Tableau de synthèse E5</a>
-    <a href="Fiche_Descriptive_Latufa_RP1.pdf" target="_blank" class="btn-outline">&#8595; Fiche RP1 — VLAN VIP &amp; Wi-Fi</a>
-    <a href="Fiche_Descriptive_Latufa_RP2.pdf" target="_blank" class="btn-outline">&#8595; Fiche RP2 — Zimbra &amp; Supervision</a>
+  <!-- TABLEAU DE SYNTHESE -->
+  <div class="pdf-viewer-section fade-in">
+    <h2>&#128065; Aperçu de mon Tableau de Synthèse</h2>
+    <embed src="Tableau_Synthese_E5_Latufa.pdf" type="application/pdf" class="pdf-embed">
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="Tableau_Synthese_E5_Latufa.pdf" target="_blank" class="btn-primary">&#8595; Télécharger le Tableau de Synthèse</a>
+    </div>
   </div>
 
-  <div class="section-label">Missions réalisées</div>
-  <h2 class="section-heading">Les 6 missions du projet</h2>
+  <!-- REALISATIONS -->
+  <div class="section-label fade-in" style="margin-top:48px;">Réalisations en cours de formation</div>
+  <h2 class="section-heading fade-in">Les deux réalisations — Projet StadiumCompany</h2>
 
-  <div class="cards-grid">
-    <div class="card fade-in">
-      <div class="card-icon">&#127760;</div>
-      <div class="card-title">Restructuration réseau</div>
-      <div class="card-desc">Segmentation de l'infrastructure via VLANs, configuration VTP et mise en place du routage inter-VLAN et routage statique pour optimiser les flux réseau.</div>
-      <div class="card-tools">
-        <span class="tool-tag">VLAN</span>
-        <span class="tool-tag">VTP</span>
-        <span class="tool-tag">Routage statique</span>
-        <span class="tool-tag">Cisco</span>
+  <div class="realisations-grid">
+    <div class="realisation-card fade-in">
+      <div class="realisation-num">Réalisation N°1</div>
+      <div class="realisation-title">Intégration du Groupe VIP et Wi-Fi Dédié</div>
+      <div class="realisation-desc">
+        StadiumCompany a inauguré une nouvelle loge VIP destinée aux personnalités et journalistes. La mission consistait à fournir un accès réseau isolé, sécurisé et performant, distinct du Wi-Fi public et des réseaux administratifs.
+      </div>
+      <div class="tags">
+        <span class="tag">VLAN 50</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">GPO</span>
+        <span class="tag">Wi-Fi WPA2-AES</span>
+        <span class="tag">Cisco</span>
+        <span class="tag">ACL</span>
+      </div>
+      <div class="card-links">
+        <a href="Fiche_Descriptive_Latufa_RP1.pdf" target="_blank" class="card-link">&#8595; Fiche réalisation</a>
       </div>
     </div>
-    <div class="card fade-in">
-      <div class="card-icon">&#128100;</div>
-      <div class="card-title">Services Active Directory</div>
-      <div class="card-desc">Installation et administration de l'Active Directory sur Windows Server 2022 : gestion des utilisateurs, groupes et politiques de groupe (GPO).</div>
-      <div class="card-tools">
-        <span class="tool-tag">Active Directory</span>
-        <span class="tool-tag">GPO</span>
-        <span class="tool-tag">Windows Server</span>
+
+    <div class="realisation-card fade-in">
+      <div class="realisation-num">Réalisation N°2</div>
+      <div class="realisation-title">Environnement collaboratif et supervision</div>
+      <div class="realisation-desc">
+        Au-delà de la connectivité, les utilisateurs VIP exigent une qualité de service irréprochable : messagerie collaborative, gestion de parc automatisée et supervision proactive du réseau Wi-Fi dédié.
       </div>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">&#128274;</div>
-      <div class="card-title">Administration distante & sécurité</div>
-      <div class="card-desc">Mise en place d'une solution d'administration sécurisée a distance via SSH et VPN pour sécurisér les interconnexions entre sites.</div>
-      <div class="card-tools">
-        <span class="tool-tag">SSH</span>
-        <span class="tool-tag">VPN</span>
-        <span class="tool-tag">Sécurité réseau</span>
+      <div class="tags">
+        <span class="tag">Zimbra</span>
+        <span class="tag">LDAP</span>
+        <span class="tag">OCS Inventory</span>
+        <span class="tag">GLPI</span>
+        <span class="tag">NagiosXI</span>
+        <span class="tag">SNMP</span>
       </div>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">&#128231;</div>
-      <div class="card-title">Messagerie Zimbra</div>
-      <div class="card-desc">Déploiement et configuration d'un serveur de messagerie Zimbra sous Linux pour les communications internes du stade.</div>
-      <div class="card-tools">
-        <span class="tool-tag">Zimbra</span>
-        <span class="tool-tag">DNS</span>
-        <span class="tool-tag">Linux</span>
-      </div>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">&#128187;</div>
-      <div class="card-title">Inventaire & ticketing GLPI</div>
-      <div class="card-desc">Installation et integration d'OCS Inventory avec GLPI pour la gestion du parc informatique et le suivi des incidents via ticketing.</div>
-      <div class="card-tools">
-        <span class="tool-tag">GLPI</span>
-        <span class="tool-tag">OCS Inventory</span>
-        <span class="tool-tag">ITSM</span>
-      </div>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">&#128202;</div>
-      <div class="card-title">Supervision NagiosXI</div>
-      <div class="card-desc">Déploiement de NagiosXI pour la supervision et la surveillance en temps reel des equipements réseau, avec alertes automatiques.</div>
-      <div class="card-tools">
-        <span class="tool-tag">NagiosXI</span>
-        <span class="tool-tag">Monitoring</span>
-        <span class="tool-tag">SNMP</span>
+      <div class="card-links">
+        <a href="Fiche_Descriptive_Latufa_RP2.pdf" target="_blank" class="card-link">&#8595; Fiche réalisation</a>
       </div>
     </div>
   </div>
@@ -136,17 +274,17 @@
 </footer>
 
 <script>
-  const progressBar = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
+  const progressBar = document.getElementById("scrollProgress");
+  window.addEventListener("scroll", () => {
     const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
-    progressBar.style.width = pct + '%';
+    if(progressBar) progressBar.style.width = pct + "%";
   });
   const obs = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); obs.unobserve(e.target); }
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add("visible"), i * 100); obs.unobserve(e.target); }
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  document.querySelectorAll(".fade-in").forEach(el => obs.observe(el));
 </script>
 </body>
 </html>

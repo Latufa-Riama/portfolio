@@ -6,40 +6,132 @@
 <title>Entreprise — Latufa Riama</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .ent-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    margin-bottom: 64px;
-  }
-  .ent-desc {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    line-height: 1.9;
-    margin-bottom: 20px;
-  }
-  .stats-row {
-    display: flex;
-    gap: 32px;
-    margin-top: 32px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
-  }
-  .stat-num {
+  .ent-hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 300;
     color: var(--rose);
-    display: block;
+    text-align: center;
+    margin-bottom: 8px;
   }
-  .stat-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+  .ent-subtitle {
+    text-align: center;
+    font-size: 0.85rem;
     color: var(--text-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
   }
+  .ent-intro {
+    max-width: 860px;
+    margin: 0 auto 48px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    text-align: justify;
+  }
+  .ent-intro strong { color: var(--text); }
+
+  .identite-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 36px 40px;
+    margin: 0 auto 48px;
+    max-width: 860px;
+    box-shadow: 0 4px 24px rgba(212,160,160,0.08);
+  }
+  .identite-box h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--rose);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--rose-light);
+  }
+  .identite-row {
+    display: flex;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rose-pale);
+    font-size: 0.88rem;
+  }
+  .identite-row:last-child { border-bottom: none; }
+  .identite-label {
+    font-weight: 600;
+    color: var(--text);
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+  .identite-value { color: var(--text-light); }
+
+  .missions-section {
+    max-width: 860px;
+    margin: 0 auto 48px;
+  }
+  .missions-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--text);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .missions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .mission-item {
+    background: var(--rose-pale);
+    border-left: 3px solid var(--rose);
+    padding: 16px 20px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  .mission-item strong { color: var(--text); display: block; margin-bottom: 4px; font-size: 0.82rem; }
+
+  .stack-section {
+    max-width: 860px;
+    margin: 0 auto 48px;
+  }
+  .stack-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--text);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .map-section {
+    max-width: 860px;
+    margin: 0 auto 48px;
+  }
+  .map-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .map-embed {
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
   @media (max-width: 768px) {
-    .ent-grid { grid-template-columns: 1fr; gap: 32px; }
+    .missions-grid { grid-template-columns: 1fr; }
+    .identite-row { flex-direction: column; gap: 2px; }
+    .identite-label { min-width: auto; }
   }
 </style>
 </head>
@@ -54,7 +146,7 @@
     <li><a href="e5.html">Épreuve E5</a></li>
     <li><a href="e6.html">Épreuve E6</a></li>
     <li><a href="veille.html">Veille</a></li>
-    <li><a href="compétences.html">Compétences</a></li>
+    <li><a href="competences.html">Compétences</a></li>
     <li><a href="entreprise.html" class="active">Entreprise</a></li>
   </ul>
   <div class="nav-jury">Espace Jury</div>
@@ -65,72 +157,127 @@
     <div class="page-number">05</div>
     <div class="page-title-block">
       <span>Mon entreprise</span>
-      <h1>WeLink<br>Montreuil</h1>
+      <h1>Mon alternance<br>chez WeLink</h1>
     </div>
   </div>
 </div>
 
 <div class="main-content">
 
-  <div class="ent-grid">
-    <div class="fade-in">
-      <div class="section-label">Presentation</div>
-      <h2 class="section-heading">L'entreprise</h2>
-      <p class="ent-desc">
-        WeLink est une ESN (Entreprise de Services du Numerique) specialisee dans la gestion et l'administration des infrastructures informatiques pour les offices notariaux. L'entreprise assure la maintenance, le support et la sécurité des systèmes d'information de ses clients.
-      </p>
-      <p class="ent-desc">
-        En tant qu'alternante depuis decembre 2024, j'interviens en support N1/N2 sur un large parc de clients notaires en Ile-de-France. Mes missions couvrent l'administration quotidienne des systèmes, la gestion des tickets via Autotask, et des projets d'infrastructure.
-      </p>
-      <div class="stats-row">
-        <div>
-          <span class="stat-num">N1/N2</span>
-          <span class="stat-label">Niveau support</span>
-        </div>
-        <div>
-          <span class="stat-num">+6</span>
-          <span class="stat-label">Mois en poste</span>
-        </div>
-        <div>
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Notariat</span>
-        </div>
-      </div>
-    </div>
+  <!-- INTRO -->
+  <div class="e-intro fade-in">
+    <p>
+      <strong>WeLink</strong> est une ESN (Entreprise de Services du Numérique) spécialisée dans la gestion et l'administration des infrastructures informatiques pour les offices notariaux en Île-de-France. Dans un secteur où la rigueur et la confidentialité sont primordiales, WeLink assure la maintenance, le support et la sécurité des systèmes d'information de ses clients notaires.
+    </p>
+    <p style="margin-top:12px;">
+      J'ai intégré WeLink en <strong>décembre 2024</strong> en tant que <strong>Technicienne Support Informatique N1/N2</strong> en alternance. Depuis mon arrivée, j'interviens directement auprès des notaires et collaborateurs pour résoudre leurs incidents, administrer leurs systèmes et assurer la continuité de leur activité. Ce contexte exigeant m'a permis de développer rapidement de vraies compétences techniques et un sens aigu du service client.
+    </p>
+  </div>
 
-    <div class="fade-in">
-      <div class="section-label">Stack technique</div>
-      <h2 class="section-heading">Outils utilises</h2>
-      <div class="skills-list">
-        <span class="skill-tag highlight">Active Directory</span>
-        <span class="skill-tag highlight">Microsoft 365</span>
-        <span class="skill-tag highlight">VPN Sophos</span>
-        <span class="skill-tag highlight">Autotask</span>
-        <span class="skill-tag">NAS Synology</span>
-        <span class="skill-tag">RDP / TSE</span>
-        <span class="skill-tag">Exchange Online</span>
-        <span class="skill-tag">SharePoint</span>
-        <span class="skill-tag">Windows Server</span>
-        <span class="skill-tag">BitLocker</span>
-        <span class="skill-tag">Genapi</span>
-        <span class="skill-tag">iNot</span>
-        <span class="skill-tag">Fiducial Notariat</span>
-        <span class="skill-tag">Azure AD</span>
-        <span class="skill-tag">Entra ID</span>
+  <!-- IDENTITE -->
+  <div class="identite-box fade-in">
+    <h2>Identité de l'entreprise</h2>
+    <div class="identite-row">
+      <span class="identite-label">Nom :</span>
+      <span class="identite-value">WeLink</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Secteur d'activité :</span>
+      <span class="identite-value">ESN — Entreprise de Services du Numérique</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Spécialité :</span>
+      <span class="identite-value">Gestion des infrastructures IT pour les offices notariaux</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Siège social :</span>
+      <span class="identite-value">Montreuil (93100), Île-de-France</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Marché :</span>
+      <span class="identite-value">B2B — Offices notariaux en Île-de-France</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Activités principales :</span>
+      <span class="identite-value">Support utilisateurs, administration systèmes et réseaux, déploiement de postes, maintenance infrastructures IT</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Mon poste :</span>
+      <span class="identite-value">Technicienne Support Informatique N1/N2 (alternance)</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Période :</span>
+      <span class="identite-value">Décembre 2024 — Juin 2026</span>
+    </div>
+    <div class="identite-row">
+      <span class="identite-label">Outil de ticketing :</span>
+      <span class="identite-value">Autotask</span>
+    </div>
+  </div>
+
+  <!-- MISSIONS -->
+  <div class="missions-section fade-in">
+    <h2>Mes missions au quotidien</h2>
+    <div class="missions-grid">
+      <div class="mission-item">
+        <strong>Administration Active Directory</strong>
+        Création et gestion des comptes utilisateurs, groupes, droits d'accès et politiques de groupe (GPO).
+      </div>
+      <div class="mission-item">
+        <strong>Microsoft 365 & Exchange Online</strong>
+        Création de boîtes mail, attribution de licences, administration SharePoint et OneDrive.
+      </div>
+      <div class="mission-item">
+        <strong>Support N1/N2</strong>
+        Prise en charge des tickets via Autotask, assistance téléphonique et à distance, résolution d'incidents.
+      </div>
+      <div class="mission-item">
+        <strong>VPN & Accès distants</strong>
+        Configuration et création d'accès VPN Sophos pour les collaborateurs en télétravail.
+      </div>
+      <div class="mission-item">
+        <strong>Déploiement de postes</strong>
+        Intégration au domaine, installation des logiciels métiers notariaux (Genapi, iNot, Fiducial Notariat).
+      </div>
+      <div class="mission-item">
+        <strong>Dépannage & maintenance</strong>
+        Résolution d'incidents Outlook, imprimantes, BitLocker, synchronisation SharePoint.
       </div>
     </div>
   </div>
 
-  <div class="context-box fade-in">
-    <h3>Mon role au quotidien</h3>
-    <p>
-      Au quotidien, je traite les tickets entrants via Autotask (appels, mails, teletravail), je resous les incidents en N1 et N2, et j'assure l'administration des comptes utilisateurs, des boites mail et des accès réseau. Je suis egalement en charge de la configuration de nouveaux postes et de l'accompagnement des utilisateurs sur les outils Microsoft 365.
-    </p>
-    <div class="context-meta">
-      <div class="meta-item"><strong>Localisation</strong>Montreuil (93)</div>
-      <div class="meta-item"><strong>Contrat</strong>Apprentissage &mdash; 12 mois</div>
-      <div class="meta-item"><strong>École</strong>IRIS Paris (candidat libre)</div>
+  <!-- STACK TECHNIQUE -->
+  <div class="stack-section fade-in">
+    <h2>Stack technique utilisée chez WeLink</h2>
+    <div class="skills-list">
+      <span class="skill-tag highlight">Active Directory</span>
+      <span class="skill-tag highlight">Microsoft 365</span>
+      <span class="skill-tag highlight">VPN Sophos</span>
+      <span class="skill-tag highlight">Autotask</span>
+      <span class="skill-tag">Exchange Online</span>
+      <span class="skill-tag">SharePoint Online</span>
+      <span class="skill-tag">Azure AD / Entra ID</span>
+      <span class="skill-tag">NAS Synology</span>
+      <span class="skill-tag">RDP / TSE</span>
+      <span class="skill-tag">Windows Server</span>
+      <span class="skill-tag">BitLocker</span>
+      <span class="skill-tag">Genapi</span>
+      <span class="skill-tag">iNot</span>
+      <span class="skill-tag">Fiducial Notariat</span>
     </div>
+  </div>
+
+  <!-- LOCALISATION -->
+  <div class="map-section fade-in">
+    <h2>Localisation</h2>
+    <iframe
+      class="map-embed"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9!2d2.4414!3d48.8637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66d8a2b2e5a5f%3A0x40b82c3688c9460!2sMontreuil%2C%2093100!5e0!3m2!1sfr!2sfr!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      style="border:0;">
+    </iframe>
   </div>
 
 </div>
@@ -147,17 +294,17 @@
 </footer>
 
 <script>
-  const progressBar = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
+  const progressBar = document.getElementById("scrollProgress");
+  window.addEventListener("scroll", () => {
     const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
-    progressBar.style.width = pct + '%';
+    if(progressBar) progressBar.style.width = pct + "%";
   });
   const obs = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); obs.unobserve(e.target); }
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add("visible"), i * 100); obs.unobserve(e.target); }
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  document.querySelectorAll(".fade-in").forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
